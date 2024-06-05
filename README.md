@@ -5,7 +5,7 @@ Dans le cadre d'un cours dispensé lors du 2<sup>nd</sup> semestre de 4<sup>ème
 
 
 ## Livrables
-* Un shield PCB branché à une baord Arduino UNO sur lequel nous retrouverons différents composants tels que :
+* Un shield PCB branché à une board Arduino UNO sur lequel nous retrouverons différents composants tels que :
   - Un capteur graphite
   - Un circuit d'amplification transimpédence
   - Un module Bluetooth
@@ -21,8 +21,6 @@ Dans le cadre d'un cours dispensé lors du 2<sup>nd</sup> semestre de 4<sup>ème
 * Un 1<sup>er</sup> code Arduino qui gère le fonctionnement et les communications des 2 à 6 avec la board
 
 * Un fichier APK Android (_conçue à l'aide du site MIT APP Inventor_) qui permet, à partir d'un smartphone Android, de gèrer l'interface avec le shield Arduino UNO par le biais d'une communication Bluetooth
-
-* Un 2<sup>nd</sup> code Arduino qui gère les composants intervenant sur le banc de test du capteur graphite (Servomoteur par exemple)
 
 * La datasheet du capteur graphite
 
