@@ -99,4 +99,6 @@ Nous avons réalisé une **[application Android](https://github.com/MOSH-Insa-To
 
 
 ## **Datasheet du capteur graphite**
-_Faire la datasheet_
+La rédaction de la datasheet induit plusieurs tests préalables de nos capteurs. Pour ce faire, nous nous sommes servis d'un banc de test imprimé en 3D, composé de 7 demi-disques allant de 1cm à 5cm de diamètre. Les dirrérents capteurs quant à eux, ont tous les mêmes dimensions, mais sont façonnés avec une variété de crayons à papier, allant du H au B en passant par le F et comprenant nombre de leur dérivées (2H, 4H, 3B et 6B dans notre cas) :
+
+![alt text](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF/blob/main/Datasheet/Photo_Banc_de_test_et_Sensors.jpg)
