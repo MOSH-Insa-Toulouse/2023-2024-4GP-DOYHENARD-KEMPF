@@ -1,4 +1,4 @@
-**# 4A GP - Projet "Du capteur au banc de test" - I4PMH21**
+# **4A GP - Projet "Du capteur au banc de test" - I4PMH21**
 
 **## Objectif du projet**
 Dans le cadre d'un cours dispensé lors du 2<sup>nd</sup> semestre de 4<sup>ème</sup> année de Génie Physique à l'INSA de Toulouse, il nous a été porposé de réaliser un capteur low-tech à base de graphite, puis d'en faire une analyse critique argumentée pour en cerner les potentialités mais également pour proposer des solutions d’amélioration. Ainsi, ce projet nous a permis de balayer l’ensemble du domaine : du capteur jusqu’à la réalisation d’une datasheet et du banc de test.
@@ -46,7 +46,7 @@ Ici, nous avons simulé un courant alternatif grâce auquel il nous sera possibl
 
 --> La simulation LTSpice est donc conforme aux attentes.
 
-**## KiCad**
+## **KiCad**
 Afin de construire un shield PCB qui respecte à la fois les consignes mentionnées dans le document _INSTRUCTIONS for the UF “From the sensor to the test bench” – I4PMH21_ ainsi que les contraintes électroniques, mécaniques et physiques des composants qu'il supportera, il nous a fallu élaborer une maquette virtuelle de ce dernier via le logiciel _KiCad_. Nous avons donc dans un 1<sup>er</sup> temps réalisé une 'schematic' 
 de l'ensemble des composants impliqués :
 ![alt text](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF/blob/main/KiCad/Photos/Screen_SCHEMATIC_Projet_Capteur.png)
