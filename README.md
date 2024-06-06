@@ -93,7 +93,7 @@ En parallèle de la partie _KiCad_, nous nous sommes attelés à la programmatio
 
 
 ## **Application Bluetooth pour Android**
-Nous avons réalisé une [application Android](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF/tree/main/Application%20Android) à l'aide du site _MIT App Inventor_. Cette application permet de lire les valeurs des capteurs en temps réel, mais aussi de les stocker pour établir des courbes de variation de résistance en fonction de la déformation qui leur est appliquée : 
+Nous avons réalisé une **[application Android](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF/tree/main/Application%20Android)** à l'aide du site _MIT App Inventor_. Cette application permet de lire les valeurs des capteurs en temps réel, mais aussi de les stocker pour établir des courbes de variation de résistance en fonction de la déformation qui leur est appliquée : 
 ![alt text](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF/blob/main/Application%20Android/Screen_App_Android.PNG)
 
 
