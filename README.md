@@ -26,6 +26,7 @@ Dans le cadre d'un cours dispensé lors du 2<sup>nd</sup> semestre de 4<sup>ème
 
 ## **LTSpice**
 Nous avons réalisé une étude de notre circuit à l'aide du logiciel _LTSpice_. En effet, le capteur étudié ayant une résistance de l'ordre du GOhm, le courant délivré est alors trop faible (de l'ordre du nA). Pour qu'il puisse être exploitable, ce signal en courant doit donc être amplifié. C'est précisément le rôle du montage suivant :
+
 ![alt text](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF/blob/main/LTSpice/Photos/Screen_Circuit_Ampli_LTSpice.png)
 _Circuit d'amplification/atténuation_
 
@@ -38,6 +39,7 @@ Ce montage se compose de 3 filtres passe-bas distincts :
 - Un 3<sup>ème</sup> placé à la sortie de l'amplificateur qui atténue le bruit intrinsèque du circuit
 
 Nous avons donc effectué 2 tests sur notre circuit : un qui vérifiera la correcte amplification du signal en sortie de circuit, l'autre qui permettra de s'assurer de la bonne atténuation du signal aux fréquences non souhaitées :
+
 ![alt text](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF/blob/main/LTSpice/Photos/Simu_Ampli_1V.png)
 
 Nous voyons ici que le signal de sortie est de 1V, soit un ordre de grandeur tout à fait mesurable et donc exploitable dans notre cas.
@@ -51,12 +53,15 @@ Ici, nous avons simulé un courant alternatif grâce auquel il nous sera possibl
 ## **KiCad**
 Afin de construire un shield PCB qui respecte à la fois les consignes mentionnées dans le document _INSTRUCTIONS for the UF “From the sensor to the test bench” – I4PMH21_ ainsi que les contraintes électroniques, mécaniques et physiques des composants qu'il supportera, il nous a fallu élaborer une maquette virtuelle de ce dernier via le logiciel _KiCad_. Nous avons donc dans un 1<sup>er</sup> temps réalisé une 'schematic' 
 de l'ensemble des composants impliqués :
+
 ![alt text](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF/blob/main/KiCad/Photos/Screen_SCHEMATIC_Projet_Capteur.png)
 
 Nous avons en suite utilisé la partie _PCB_ du logiciel afin de disposer les différents composants sur le shield, en tenant compte de la contrainte liée aux masses, qui doivent être réliées indirectement entre elles via le plan de masse. Nous sommes arrivés au résultat suivant :
+
 ![alt text](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF/blob/main/KiCad/Photos/Screen_PCB__Projet_Capteur.png)
 
-Nous avons également effectué un rendu 3D de notre shield afin d'en avoir un 1<sup>er</sup> appreçu 'réaliste', dont voici un cliché pris du dessus :
+Nous avons également effectué un rendu 3D de notre shield afin d'en avoir un 1<sup>er</sup> aperçu 'réaliste', dont voici un cliché pris du dessus :
+
 ![alt text](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF/blob/main/KiCad/Photos/Screen_3D_vue_haut_PCB_Projet_Capteur.png)
 
 ## **Confection du shield**
@@ -67,6 +72,7 @@ Les principales étapes de fabrication sont :
 - Le placement de la plaquette dans une solution de percholorure de fer.
 
 A la suite de cela, avons pu assembler les composants sur la plaquette. Pour cela, il a fallu respecter les consignes à appliquer que ce soit au niveau du perçage de la plaquette ou bien du soudage des composants :
+
 ![alt text](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF/blob/main/KiCad/Photos/Photo_Shield_Face_Avant.png)
 ![alt text](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF/blob/main/KiCad/Photos/Photo_Shield_Face_Arriere.png)
 
