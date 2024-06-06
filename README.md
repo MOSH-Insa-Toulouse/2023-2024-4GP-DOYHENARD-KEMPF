@@ -71,7 +71,7 @@ Nous avons également effectué un rendu 3D de notre shield afin d'en avoir un 1
 
 ![alt text](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF/blob/main/KiCad/Photos/Screen_3D_vue_haut_PCB_Projet_Capteur.png)
 
-## **Confection du shield**
+## **Conception du shield**
 Après validation de notre travail sur _KiCad_ par nos responsables, nous avons procédé à la confection réelle de notre shield, fabriqué à partir d'une plaquette d’époxy recouverte d’une fine couche de cuivre.
 Les principales étapes de fabrication sont :
 - Une insolation aux UVs de la plaquette grâce au calque modélisé dans la partie PCB de _KiCad_.
