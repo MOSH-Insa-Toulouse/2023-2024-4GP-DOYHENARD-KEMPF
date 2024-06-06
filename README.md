@@ -8,7 +8,6 @@ Dans le cadre d'un cours dispensé lors du 2<sup>nd</sup> semestre de 4<sup>ème
 
 
 ## **Livrables**
-main
 * Un shield PCB branché à une board Arduino UNO sur lequel nous retrouverons différents composants tels que :
   - Un capteur graphite
   - Un circuit d'amplification transimpédence
