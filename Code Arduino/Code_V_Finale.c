@@ -9,7 +9,6 @@
 #include <SoftwareSerial.h>
 
 
-
 //////////////////////////////////////////// DECLARATIONS ET DEFINITIONS DIVERSES ////////////////////////////////////////////
 
 
@@ -42,7 +41,7 @@ Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 int selectedItem = 0;
 bool inSubMenu = false;
 const int numItems = 2;
-const char *menuItems[] = {"Afficher les mesures", "Modifier resistance"};
+const char *menuItems[] = {"1. Sensors values", "2. R2 variation"};
 
 // Déclaration pour le potentiomètre digital
 const byte csPin           = 10;      
@@ -97,10 +96,22 @@ void setup() {
     Serial.println(F("Echec de l'allocation SSD1306"));
     for(;;);
   }
-  display.setTextSize(1);
-  display.display();
-  delay(2000);
   display.clearDisplay();
+
+  // Afficher le texte personnalisé au démarrage
+  display.setTextSize(2);
+  display.setTextColor(SSD1306_WHITE);
+  display.setCursor(39, 10); // Ajuster les coordonnées pour centrer le texte
+  display.println("INSA");
+  display.setCursor(63, 31);
+  display.setTextSize(1);
+  display.println("-");
+  display.setCursor(27, 42);
+  display.println("Strain sensor");
+  display.display();
+  delay(2000);  // Attendre 2 secondes avant d'effacer l'écran
+
+  display.clearDisplay();  // Effacer l'écran après le démarrage
 
   // Initialisation de la communication avec le potentiomètre digital
   digitalWrite(csPin, HIGH);        
@@ -118,7 +129,6 @@ void loop() {
   // Lecture de l'état du bouton poussoir de l'encodeur pour la navigation dans les sous-menus
   int stateSW = digitalRead(SW);
   if (stateSW != lastStateSW && stateSW == LOW) {
-    Serial.println(F("Clic!"));
     inSubMenu = !inSubMenu;
   }
   lastStateSW = stateSW;
@@ -137,40 +147,50 @@ void loop() {
   display.clearDisplay();
 
   if (!inSubMenu) {
+    display.clearDisplay();
+    display.setTextSize(2);
+    display.setTextColor(SSD1306_WHITE);
+    display.setCursor(0, 0);
+    display.println(" MAIN MENU");
+    display.setTextSize(1);
+    display.print("---------------------");
+    display.setCursor(0, 35);
     for (int i = 0; i < numItems; ++i) {
       if (i == selectedItem) {
-        display.setTextColor(SSD1306_BLACK, SSD1306_WHITE);
+        display.print("> ");
       } else {
-        display.setTextColor(SSD1306_WHITE);
+        display.print("  ");
       }
-      display.setCursor(0, i * 10);
       display.println(menuItems[i]);
     }
+
   } else {
     display.setTextColor(SSD1306_WHITE);
     display.setCursor(0, 0);
 
     switch (selectedItem) {
       case 0:
-        display.println(F("Tension graphite :  "));
+        display.println(F("Graphite voltage :  "));
         display.print(tension_graphite);
         display.println(F(" V"));
         display.println();
-        display.println(F("Resistance graphite :"));
+        display.println(F("Graphite resistance :"));
         display.print(resistance_graphite);
         display.println(F(" MOhms"));
         display.println();
-        display.println(F("Resistance flex : "));
+        display.println(F("Flex resistance : "));
         display.print(resistance_flex);
         display.println(F(" Ohms"));
         break;
 
       case 1:             
-        display.println(F("Resistance variable :"));
+        display.println();
+        display.println();
+        display.println(F("R2 variation :"));
         display.print(resistance_variable);
         display.println(F(" Ohms"));
         display.println();
-        display.println(F("Tension graphite :  "));
+        display.println(F("Graphite voltage :  "));
         display.print(tension_graphite);
         display.println(F(" V"));
         break;
