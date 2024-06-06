@@ -88,7 +88,7 @@ _A noter que nous avons finalement décidé de ne pas nous servir de Servomoteur
 
 
 ## **Code Arduino**
-En parallèle de la partie _KiCad_, nous nous sommes attelés à la programmation du **[code Arduino](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF/blob/main/Code%20Arduino/Code_V_Finale.c))** qui permettra la commuication de chacun des composants entre eux mais aussi avec l'Arduino UNO.
+En parallèle de la partie _KiCad_, nous nous sommes attelés à la programmation du **[code Arduino](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF/blob/main/Code%20Arduino/Code_V_Finale.c)** qui permettra la commuication de chacun des composants entre eux mais aussi avec l'Arduino UNO.
 
 
 
