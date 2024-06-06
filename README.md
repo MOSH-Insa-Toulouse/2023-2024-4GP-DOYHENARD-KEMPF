@@ -107,8 +107,8 @@ La rédaction de la datasheet induit plusieurs tests préalables de nos capteurs
 
 Nous avons ainsi effectué différentes mesures pour chaque type de crayon, ainsi que pour le flex sensor commercial que l'on pourra donc comparer : 
 - Mesure de résistance à plat
-- Série de mesure de résistance avec une déformation en extension en suivant certains demi-disques sélectionnés.
-- Série de mesure de résistance avec une déformation en compression avec les mêmes demi-disques.
+- Série de mesure de résistance avec une déformation en **extension** en suivant certains demi-disques sélectionnés.
+- Série de mesure de résistance avec une déformation en **compression** avec les mêmes demi-disques.
 
 _A noter que des valeurs incohérentes ont été observées pour certains capteurs. Nous avons donc décidé de ne pas les retenir dans nos résultats finaux._
 
