@@ -1,7 +1,10 @@
 # **4A GP - Projet "Du capteur au banc de test" - I4PMH21**
 
+
+
 ## **Objectif du projet**
 Dans le cadre d'un cours dispensé lors du 2<sup>nd</sup> semestre de 4<sup>ème</sup> année de Génie Physique à l'INSA de Toulouse, il nous a été porposé de réaliser un capteur low-tech à base de graphite, puis d'en faire une analyse critique argumentée pour en cerner les potentialités mais également pour proposer des solutions d’amélioration. Ainsi, ce projet nous a permis de balayer l’ensemble du domaine : du capteur jusqu’à la réalisation d’une datasheet et du banc de test.
+
 
 
 ## **Livrables**
@@ -22,6 +25,7 @@ Dans le cadre d'un cours dispensé lors du 2<sup>nd</sup> semestre de 4<sup>ème
 * Un fichier APK Android (_conçue à l'aide du site MIT APP Inventor_) qui permet, à partir d'un smartphone Android, de gèrer l'interface avec le shield Arduino UNO par le biais d'une communication Bluetooth
 
 * La datasheet du capteur graphite
+
 
 
 ## **LTSpice**
@@ -49,6 +53,8 @@ Nous voyons ici que le signal de sortie est de 1V, soit un ordre de grandeur tou
 Ici, nous avons simulé un courant alternatif grâce auquel il nous sera possible d'observer la réduction du bruit : Nous observons une atténuation d'environ 46 dB à 50 Hz. Le comportement global du circuit est bel est bien passe-bas.
 
 --> La simulation LTSpice est donc conforme aux attentes.
+
+
 
 ## **KiCad**
 Afin de construire un shield PCB qui respecte à la fois les consignes mentionnées dans le document _INSTRUCTIONS for the UF “From the sensor to the test bench” – I4PMH21_ ainsi que les contraintes électroniques, mécaniques et physiques des composants qu'il supportera, il nous a fallu élaborer une maquette virtuelle de ce dernier via le logiciel _KiCad_. Nous avons donc dans un 1<sup>er</sup> temps réalisé une 'schematic' 
@@ -78,12 +84,18 @@ A la suite de cela, avons pu assembler les composants sur la plaquette. Pour cel
 
 _A noter que nous avons finalement décidé de ne pas nous servir de Servomoteur du fait d'un manque de temps._
 
+
+
 ## **Code Arduino**
 En parallèle de la partie _KiCad_, nous nous sommes attelés à la programmation du **[code Arduino](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF/blob/main/Code%20Arduino/Code_V_Finale.c))** qui permettra la commuication de chacun des composants entre eux mais aussi avec l'Arduino UNO.
+
+
 
 ## **Application Bluetooth pour Android**
 Nous avons réalisé une [application Android](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF/blob/main/APK_Android) à l'aide du site _MIT App Inventor_. Cette application permet de lire les valeurs des capteurs en temps réel, mais aussi de les stocker pour établir des courbes de variation de résistance en fonction de la déformation qui leur est appliquée : 
 _Faire et mettre une photo de l'app_
+
+
 
 ## **Datasheet du capteur graphite**
 _Faire la datasheet_
