@@ -80,8 +80,8 @@ Les principales étapes de fabrication sont :
 
 A la suite de cela, avons pu assembler les composants sur la plaquette. Pour cela, il a fallu respecter les consignes à appliquer que ce soit au niveau du perçage de la plaquette ou bien du soudage des composants :
 
-![alt text](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF/blob/main/KiCad/Photos/Photo_Shield_Face_Avant.png)
-![alt text](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF/blob/main/KiCad/Photos/Photo_Shield_Face_Arriere.png)
+![alt text](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF/blob/main/KiCad/Photos/Photo_Shield_Face_Avant.jpg)
+![alt text](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF/blob/main/KiCad/Photos/Photo_Shield_Face_Arriere.jpg)
 
 _A noter que nous avons finalement décidé de ne pas nous servir de Servomoteur du fait d'un manque de temps._
 
