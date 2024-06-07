@@ -31,9 +31,13 @@ Dans le cadre d'un cours dispensé lors du 2<sup>nd</sup> semestre de 4<sup>ème
 ## **LTSpice**
 Nous avons réalisé une étude de notre circuit à l'aide du logiciel _LTSpice_. En effet, le capteur étudié ayant une résistance de l'ordre du GOhm, le courant délivré est alors trop faible (de l'ordre du nA). Pour qu'il puisse être exploitable, ce signal en courant doit donc être **filtré** de tout bruit parasite puis **amplifié**. C'est précisément le rôle du montage suivant :
 
-![_Circuit d'amplification/atténuation_](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF/blob/main/LTSpice/Photos/Screen_Circuit_Ampli_LTSpice.png)
-
-![_Modélisation du capteur_](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF/blob/main/LTSpice/Photos/Screen_Capteur_LTSpice.png)
+![alt text](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF/blob/main/LTSpice/Photos/Screen_Circuit_Ampli_LTSpice.png)
+> [!NOTE]
+> _Circuit d'amplification/atténuation_
+> 
+![alt text](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF/blob/main/LTSpice/Photos/Screen_Capteur_LTSpice.png)
+> [!NOTE]
+> _Modélisation du capteur_
 
 Ce montage se compose de 3 filtres passe-bas distincts :
 - Un 1<sup>er</sup> filtrant les bruits en courant sur le signal d'entrée causés par l’alimentation 5V
