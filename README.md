@@ -1,6 +1,14 @@
 # **4A GP - Projet "Du capteur au banc de test" - I4PMH21**
 
-
+## **Sommaire**
++ [Objectif du projet](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF?tab=readme-ov-file#objectif-du-projet)
++ [Livrables](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF?tab=readme-ov-file#livrables)
++ [LTSpice](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF?tab=readme-ov-file#ltspice)
++ [KiCad](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF?tab=readme-ov-file#kicad)
++ [Shield](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF?tab=readme-ov-file#conception-du-shield)
++ [Code Arduino](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF?tab=readme-ov-file#code-arduino)
++ [Application Android](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF?tab=readme-ov-file#application-bluetooth-pour-android)
++ [Datasheet](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF?tab=readme-ov-file#datasheet-du-capteur-graphite)
 
 ## **Objectif du projet**
 Dans le cadre d'un cours dispensé lors du 2<sup>nd</sup> semestre de 4<sup>ème</sup> année de Génie Physique à l'INSA de Toulouse, il nous a été porposé de réaliser un capteur low-tech à base de graphite, puis d'en faire une analyse critique argumentée pour en cerner les potentialités mais également pour proposer des solutions d’amélioration. Ainsi, ce projet nous a permis de balayer l’ensemble du domaine : du capteur jusqu’à la réalisation d’une datasheet et du banc de test.
@@ -85,7 +93,7 @@ A la suite de cela, avons pu assembler les composants sur la plaquette. Pour cel
 
 
 
-## **Code Arduino**
+## **Code Arduino [alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Arduino_Logo.svg/1280px-Arduino_Logo.svg.png)**
 En parallèle de la partie _KiCad_, nous nous sommes attelés à la programmation du **[code Arduino](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF/blob/main/Code%20Arduino/Code_V_Finale.c)** qui permettra la commuication de chacun des composants entre eux mais aussi avec l'Arduino UNO, ainsi qu'avec un smartphone via l'application Android.
 
 
@@ -98,13 +106,13 @@ Nous avons réalisé une **[application Android](https://github.com/MOSH-Insa-To
 
 
 ## **Datasheet du capteur graphite**
-La rédaction de la datasheet induit plusieurs tests préalables de nos capteurs. Pour ce faire, nous nous sommes servis d'un banc de test imprimé en 3D, composé de 7 demi-disques allant de 1cm à 5cm de diamètre. Les dirrérents capteurs quant à eux, ont tous les mêmes dimensions, mais sont façonnés avec une variété de crayons à papier, allant du H au B en passant par le F et comprenant nombre de leur dérivées (2H, 4H, 3B et 6B dans notre cas) :
+La rédaction de la datasheet induit plusieurs tests préalables de nos capteurs. Pour ce faire, nous nous sommes servis d'un banc de test imprimé en 3D, composé de 7 demi-disques allant de 1cm à 5cm de diamètre. Les capteurs quant à eux, ont tous les mêmes dimensions, mais sont usinés avec différents type de crayons à papier, allant du H au B en passant par le F et comprenant nombre de leur dérivées (2H, 4H, 3B et 6B dans notre cas) :
 
 ![lat text](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF/blob/main/Datasheet/Variation_durete_crayon.jpg)
 
 ![alt text](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF/blob/main/Datasheet/Photo_Banc_de_test_et_Sensors.jpg)
 
-Nous avons ainsi effectué différentes mesures pour chaque type de crayon, ainsi que pour le flex sensor commercial que l'on pourra donc comparer : 
+Nous avons ainsi effectué plusieurs mesures pour chaque type de crayon, ainsi que pour le flex sensor commercial avec lequel nous comparerons nos résultats : 
 - Mesure de résistance à plat
 - Série de mesure de résistance avec une déformation en **extension** en suivant certains demi-disques sélectionnés.
 - Série de mesure de résistance avec une déformation en **compression** avec les mêmes demi-disques.
