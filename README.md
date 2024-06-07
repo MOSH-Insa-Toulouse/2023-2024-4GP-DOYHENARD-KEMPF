@@ -122,4 +122,4 @@ Nous avons ainsi effectué plusieurs mesures pour chaque type de crayon, ainsi q
 
 --> Nous avons pu par la suite établir des graphes montrant la variation relative de résistance des différents capteurs en fonction de la déformation subie.
 
-Pour rappel, la résistance du capteur est calculée grâce à l'équation suivante : $`R_Meas = (V_CC/V_ADC)*R_1*(1+(R_3/R_2)-R_1-R_5`$
+Pour rappel, la résistance du capteur est calculée grâce à l'équation suivante : $`R_{Meas} = (V_{CC}/V_{ADC})*R_1*(1+(R_3/R_2)-R_1-R_5`$
