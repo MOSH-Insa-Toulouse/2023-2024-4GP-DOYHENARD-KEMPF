@@ -32,12 +32,9 @@ Dans le cadre d'un cours dispensé lors du 2<sup>nd</sup> semestre de 4<sup>ème
 Nous avons réalisé une étude de notre circuit à l'aide du logiciel _LTSpice_. En effet, le capteur étudié ayant une résistance de l'ordre du GOhm, le courant délivré est alors trop faible (de l'ordre du nA). Pour qu'il puisse être exploitable, ce signal en courant doit donc être **filtré** de tout bruit parasite puis **amplifié**. C'est précisément le rôle du montage suivant :
 
 ![alt text](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF/blob/main/LTSpice/Photos/Screen_Circuit_Ampli_LTSpice.png)
-> [!NOTE]
-> _Circuit d'amplification/atténuation_
-> 
+                                        _Circuit d'amplification/atténuation_
 ![alt text](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF/blob/main/LTSpice/Photos/Screen_Capteur_LTSpice.png)
-> [!NOTE]
-> _Modélisation du capteur_
+                                          _Modélisation du capteur_
 
 Ce montage se compose de 3 filtres passe-bas distincts :
 - Un 1<sup>er</sup> filtrant les bruits en courant sur le signal d'entrée causés par l’alimentation 5V
@@ -59,8 +56,7 @@ Ici, nous avons simulé un courant alternatif grâce auquel il nous sera possibl
 
 
 ## **KiCad**
-Afin de construire un shield PCB qui respecte à la fois les consignes mentionnées dans le document _INSTRUCTIONS for the UF “From the sensor to the test bench” – I4PMH21_ ainsi que les contraintes électroniques, mécaniques et physiques des composants qu'il supportera, il nous a fallu élaborer une maquette virtuelle de ce dernier via le logiciel _KiCad_. Nous avons donc dans un 1<sup>er</sup> temps réalisé une 'schematic' 
-de l'ensemble des composants impliqués :
+Afin de construire un shield PCB qui respecte à la fois les consignes mentionnées dans le document _INSTRUCTIONS for the UF “From the sensor to the test bench” – I4PMH21_ ainsi que les contraintes électroniques, mécaniques et physiques des composants qu'il supportera, il nous a fallu élaborer une maquette virtuelle de ce dernier via le logiciel _KiCad_. Nous avons donc dans un 1<sup>er</sup> temps réalisé une 'schematic' de l'ensemble des composants impliqués :
 
 ![alt text](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF/blob/main/KiCad/Photos/Screen_SCHEMATIC_Projet_Capteur.png)
 
@@ -84,7 +80,8 @@ A la suite de cela, avons pu assembler les composants sur la plaquette. Pour cel
 ![alt text](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF/blob/main/KiCad/Photos/Photo_Shield_Face_Avant.jpg)
 ![alt text](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF/blob/main/KiCad/Photos/Photo_Shield_Face_Arriere.jpg)
 
-_A noter que nous avons finalement décidé de ne pas nous servir de Servomoteur du fait d'un manque de temps._
+> [!NOTE]
+> Nous avons finalement décidé de ne pas nous servir de Servomoteur du fait d'un manque de temps.
 
 
 
@@ -112,6 +109,7 @@ Nous avons ainsi effectué différentes mesures pour chaque type de crayon, ains
 - Série de mesure de résistance avec une déformation en **extension** en suivant certains demi-disques sélectionnés.
 - Série de mesure de résistance avec une déformation en **compression** avec les mêmes demi-disques.
 
-_A noter que des valeurs incohérentes ont été observées pour certains capteurs. Nous avons donc décidé de ne pas les retenir dans nos résultats finaux._
+> [!NOTE]
+> Des valeurs incohérentes ont été observées pour certains capteurs. Nous avons donc décidé de ne pas les retenir dans nos résultats finaux.
 
 --> Nous avons pu par la suite établir des graphes montrant la variation relative de résistance des différents capteurs en fonction de la déformation subie.
