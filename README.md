@@ -49,7 +49,9 @@ Ce montage se compose de 3 filtres passe-bas distincts :
 - Un 2<sup>nd</sup> formé par C<sub>4</sub> et R<sub>3</sub>, pour réduire la composante de bruit à 50 Hz induite par réseau électrique ambiant
 - Un 3<sup>ème</sup> formé par R<sub>6</sub> et C<sub>2</sub>, placé à la sortie de l'amplificateur qui atténue le bruit intrinsèque du circuit
 
-Nous avons donc effectué 2 tests sur notre circuit : un qui vérifiera la correcte amplification du signal en sortie de circuit, l'autre qui permettra de s'assurer de la bonne atténuation du signal pour des fréquences non souhaitées :
+Grâce à ce montage, nous sommes capable de mesurer la résistance du capteur graphite en suivant la formule suivante : $`R_{Meas} = \frac{V_{CC}}{V_{ADC}}*R_1*(1+\frac{R_3}{R_{potentio}})-R_1-R_5`$
+
+Afin de nous assurer que notre circuit jouait bien le rôle de filtreur/amplificateur, nous avons réalisé 2 simulation : une qui vérifiera la correcte amplification du signal en sortie de circuit, l'autre qui permettra de confirmer la bonne atténuation du signal pour des fréquences non souhaitées :
 
 ![alt text](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF/blob/main/LTSpice/Photos/Simu_Ampli_1V.png)
 
@@ -106,7 +108,7 @@ Nous avons réalisé une **[application Android](https://github.com/MOSH-Insa-To
 
 
 ## **Datasheet du capteur graphite**
-La rédaction de la datasheet induit plusieurs tests préalables de nos capteurs. Pour ce faire, nous nous sommes servis d'un banc de test imprimé en 3D, composé de 7 demi-disques allant de 1cm à 5cm de diamètre. Les capteurs quant à eux, ont tous les mêmes dimensions, mais sont usinés avec différents type de crayons à papier, allant du H au B en passant par le F et comprenant nombre de leur dérivées (2H, 4H, 3B et 6B dans notre cas) :
+La rédaction de la datasheet induit plusieurs tests préalables de nos capteurs. Pour ce faire, nous nous sommes servis d'un banc de test imprimé en 3D, composé de 7 demi-disques allant de 1cm à 5cm de diamètre. Les capteurs quant à eux, ont tous les mêmes dimensions, mais sont usinés avec différents type de crayons à papier, allant du H au B en passant par le F et comprenant nombre de leur dérivées (HB, 2H, 4H, 4B et 6B dans notre cas) :
 
 ![lat text](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF/blob/main/Datasheet/Variation_durete_crayon.jpg)
 
@@ -120,6 +122,7 @@ Nous avons ainsi effectué plusieurs mesures pour chaque type de crayon, ainsi q
 > [!NOTE]
 > Des valeurs incohérentes ont été observées pour certains capteurs. Nous avons donc décidé de ne pas les retenir dans nos résultats finaux.
 
---> Nous avons pu par la suite établir des graphes montrant la variation relative de résistance des différents capteurs en fonction de la déformation subie.
+--> Nous avons pu par la suite établir des graphes montrant la variation relative de résistance des différents capteurs en fonction de la déformation subie (compression ou extension, à divers degré d'intensité) que l'on retrouve dans la **![datasheet](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF/blob/main/Datasheet/%5BDataheet%5D%20-%20Pencil-Drawn%20Strain%20Gauge.pdf)** de nos capteurs graphite.
 
-Pour rappel, la résistance du capteur est calculée grâce à l'équation suivante : $`R_{Meas} = \frac{V_{CC}}{V_{ADC}}*R_1*(1+\frac{R_3}{R_{potentio}})-R_1-R_5`$
+> [!WARNING]
+> Les mesures ayant été difficiles, du fait d'une faible reproductibilité induite par des paramètres variants (densité de graphite au cours du temps, faux-contact électrique détecté en fin de prise de mesures), les résultats en valeurs absolues n'ont pas répondu à nos exigeances. Il nous a donc fallu nous appuyer sur l'aide de ![collègues INSAïens](https://github.com/MOSH-Insa-Toulouse/2022-2023-Conan-Pistre) de la promo 2024, sans qui les courbes de mesures ne figureraient pas.
