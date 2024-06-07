@@ -45,9 +45,9 @@ _Circuit d'amplification/atténuation_
 _Modélisation du capteur_
 
 Ce montage se compose de 3 filtres passe-bas distincts :
-- Un 1<sup>er</sup> filtrant les bruits en courant sur le signal d'entrée causés par l’alimentation 5V
-- Un 2<sup>nd</sup> pour réduire la composante de bruit à 50 Hz induite par réseau électrique ambiant
-- Un 3<sup>ème</sup> placé à la sortie de l'amplificateur qui atténue le bruit intrinsèque du circuit
+- Un 1<sup>er</sup> formé par R<sub>5</sub>, C<sub>1</sub> et R<sub>1</sub>, filtrant les bruits en courant sur le signal d'entrée causés par l’alimentation 5V symbolisé par le 'SINE' + C<sub>3</sub>
+- Un 2<sup>nd</sup> formé par C<sub>4</sub> et R<sub>3</sub>, pour réduire la composante de bruit à 50 Hz induite par réseau électrique ambiant
+- Un 3<sup>ème</sup> formé par R<sub>6</sub> et C<sub>2</sub>, placé à la sortie de l'amplificateur qui atténue le bruit intrinsèque du circuit
 
 Nous avons donc effectué 2 tests sur notre circuit : un qui vérifiera la correcte amplification du signal en sortie de circuit, l'autre qui permettra de s'assurer de la bonne atténuation du signal pour des fréquences non souhaitées :
 
@@ -121,3 +121,5 @@ Nous avons ainsi effectué plusieurs mesures pour chaque type de crayon, ainsi q
 > Des valeurs incohérentes ont été observées pour certains capteurs. Nous avons donc décidé de ne pas les retenir dans nos résultats finaux.
 
 --> Nous avons pu par la suite établir des graphes montrant la variation relative de résistance des différents capteurs en fonction de la déformation subie.
+
+Pour rappel, la résistance du capteur est calculée selon l'équation suivante : $R_Meas = (V_CC/V_ADC)*R_1*(1+(R_3/R_2)-R_1-R_5$
