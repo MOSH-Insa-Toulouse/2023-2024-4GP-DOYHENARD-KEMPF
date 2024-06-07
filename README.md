@@ -110,7 +110,7 @@ Nous avons réalisé une **[application Android](https://github.com/MOSH-Insa-To
 ## **Datasheet du capteur graphite**
 La rédaction de la datasheet induit plusieurs tests préalables de nos capteurs. Pour ce faire, nous nous sommes servis d'un banc de test imprimé en 3D, composé de 7 demi-disques allant de 1cm à 5cm de diamètre. Les capteurs quant à eux, ont tous les mêmes dimensions, mais sont usinés avec différents type de crayons à papier, allant du H au B en passant par le F et comprenant nombre de leur dérivées (HB, 2H, 4H, 4B et 6B dans notre cas) :
 
-![lat text](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF/blob/main/Datasheet/Variation_durete_crayon.jpg)
+![alt text](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF/blob/main/Datasheet/Variation_durete_crayon.jpg)
 
 ![alt text](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF/blob/main/Datasheet/Photo_Banc_de_test_et_Sensors.jpg)
 
@@ -122,7 +122,7 @@ Nous avons ainsi effectué plusieurs mesures pour chaque type de crayon, ainsi q
 > [!NOTE]
 > Des valeurs incohérentes ont été observées pour certains capteurs. Nous avons donc décidé de ne pas les retenir dans nos résultats finaux.
 
---> Nous avons pu par la suite établir des graphes montrant la variation relative de résistance des différents capteurs en fonction de la déformation subie (compression ou extension, à divers degré d'intensité) que l'on retrouve dans la **![datasheet](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF/blob/main/Datasheet/%5BDataheet%5D%20-%20Pencil-Drawn%20Strain%20Gauge.pdf)** de nos capteurs graphite.
+--> Nous avons pu par la suite établir des graphes montrant la variation relative de résistance des différents capteurs en fonction de la déformation subie (compression ou extension, à divers degré d'intensité) que l'on retrouve dans la **[datasheet](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF/blob/main/Datasheet/%5BDataheet%5D%20-%20Pencil-Drawn%20Strain%20Gauge.pdf)** de nos capteurs graphite.
 
 > [!WARNING]
-> Les mesures ayant été difficiles, du fait d'une faible reproductibilité induite par des paramètres variants (densité de graphite au cours du temps, faux-contact électrique détecté en fin de prise de mesures), les résultats en valeurs absolues n'ont pas répondu à nos exigeances. Il nous a donc fallu nous appuyer sur l'aide de ![collègues INSAïens](https://github.com/MOSH-Insa-Toulouse/2022-2023-Conan-Pistre) de la promo 2024, sans qui les courbes de mesures ne figureraient pas.
+> Les mesures ayant été difficiles, du fait d'une faible reproductibilité induite par des paramètres variants (densité de graphite au cours du temps, faux-contact électrique détecté en fin de prise de mesures), les résultats en valeurs absolues n'ont pas répondu à nos exigeances. Il nous a donc fallu nous appuyer sur l'aide de [collègues INSAïens](https://github.com/MOSH-Insa-Toulouse/2022-2023-Conan-Pistre) de la promo 2024, sans qui les courbes de mesures ne figureraient pas.
