@@ -93,7 +93,7 @@ A la suite de cela, avons pu assembler les composants sur la plaquette. Pour cel
 
 
 
-## **Code Arduino [alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Arduino_Logo.svg/1280px-Arduino_Logo.svg.png)**
+## **Code Arduino**
 En parallèle de la partie _KiCad_, nous nous sommes attelés à la programmation du **[code Arduino](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF/blob/main/Code%20Arduino/Code_V_Finale.c)** qui permettra la commuication de chacun des composants entre eux mais aussi avec l'Arduino UNO, ainsi qu'avec un smartphone via l'application Android.
 
 
