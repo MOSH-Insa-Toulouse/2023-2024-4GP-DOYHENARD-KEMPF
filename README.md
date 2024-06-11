@@ -1,9 +1,17 @@
 # **4A GP - Projet "Du capteur au banc de test" - I4PMH21**
 
-
+## **Sommaire**
++ [Objectif du projet](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF?tab=readme-ov-file#objectif-du-projet)
++ [Livrables](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF?tab=readme-ov-file#livrables)
++ [LTSpice](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF?tab=readme-ov-file#ltspice)
++ [KiCad](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF?tab=readme-ov-file#kicad)
++ [Shield](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF?tab=readme-ov-file#conception-du-shield)
++ [Code Arduino](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF?tab=readme-ov-file#code-arduino)
++ [Application Android](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF?tab=readme-ov-file#application-bluetooth-pour-android)
++ [Datasheet](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF?tab=readme-ov-file#datasheet-du-capteur-graphite)
 
 ## **Objectif du projet**
-Dans le cadre d'un cours dispensé lors du 2<sup>nd</sup> semestre de 4<sup>ème</sup> année de Génie Physique à l'INSA de Toulouse, il nous a été porposé de réaliser un capteur low-tech à base de graphite, puis d'en faire une analyse critique argumentée pour en cerner les potentialités mais également pour proposer des solutions d’amélioration. Ainsi, ce projet nous a permis de balayer l’ensemble du domaine : du capteur jusqu’à la réalisation d’une datasheet et du banc de test.
+Dans le cadre d'un cours dispensé lors du 2<sup>nd</sup> semestre de 4<sup>ème</sup> année de Génie Physique à l'INSA de Toulouse, il nous a été proposé de réaliser un capteur low-tech à base de graphite, puis d'en faire une analyse critique argumentée pour en cerner les potentialités mais également pour évoquer des solutions d’amélioration. Ainsi, ce projet nous a permis de balayer l’ensemble du domaine : du capteur jusqu’à la réalisation d’une datasheet et du banc de test.
 
 
 
@@ -31,16 +39,19 @@ Dans le cadre d'un cours dispensé lors du 2<sup>nd</sup> semestre de 4<sup>ème
 ## **LTSpice**
 Nous avons réalisé une étude de notre circuit à l'aide du logiciel _LTSpice_. En effet, le capteur étudié ayant une résistance de l'ordre du GOhm, le courant délivré est alors trop faible (de l'ordre du nA). Pour qu'il puisse être exploitable, ce signal en courant doit donc être **filtré** de tout bruit parasite puis **amplifié**. C'est précisément le rôle du montage suivant :
 
-![_Circuit d'amplification/atténuation_](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF/blob/main/LTSpice/Photos/Screen_Circuit_Ampli_LTSpice.png)
-
-![_Modélisation du capteur_](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF/blob/main/LTSpice/Photos/Screen_Capteur_LTSpice.png)
+![alt text](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF/blob/main/LTSpice/Photos/Screen_Circuit_Ampli_LTSpice.png)
+_Circuit d'amplification/atténuation_
+![alt text](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF/blob/main/LTSpice/Photos/Screen_Capteur_LTSpice.png)
+_Modélisation du capteur_
 
 Ce montage se compose de 3 filtres passe-bas distincts :
-- Un 1<sup>er</sup> filtrant les bruits en courant sur le signal d'entrée causés par l’alimentation 5V
-- Un 2<sup>nd</sup> pour réduire la composante de bruit à 50 Hz induite par réseau électrique ambiant
-- Un 3<sup>ème</sup> placé à la sortie de l'amplificateur qui atténue le bruit intrinsèque du circuit
+- Un 1<sup>er</sup> formé par R<sub>5</sub>, C<sub>1</sub> et R<sub>1</sub>, filtrant les bruits en courant sur le signal d'entrée causés par l’alimentation 5V symbolisé par le 'SINE' + C<sub>3</sub>
+- Un 2<sup>nd</sup> formé par C<sub>4</sub> et R<sub>3</sub>, pour réduire la composante de bruit à 50 Hz induite par réseau électrique ambiant
+- Un 3<sup>ème</sup> formé par R<sub>6</sub> et C<sub>2</sub>, placé à la sortie de l'amplificateur qui atténue le bruit intrinsèque du circuit
 
-Nous avons donc effectué 2 tests sur notre circuit : un qui vérifiera la correcte amplification du signal en sortie de circuit, l'autre qui permettra de s'assurer de la bonne atténuation du signal aux fréquences non souhaitées :
+Grâce à ce montage, nous sommes capable de mesurer la résistance du capteur graphite en suivant la formule suivante : $`R_{Meas} = \frac{V_{CC}}{V_{ADC}}*R_1*(1+\frac{R_3}{R_{potentio}})-R_1-R_5`$
+
+Afin de nous assurer que notre circuit jouait bien le rôle de filtreur/amplificateur, nous avons réalisé 2 simulation : une qui vérifiera la correcte amplification du signal en sortie de circuit, l'autre qui permettra de confirmer la bonne atténuation du signal pour des fréquences non souhaitées :
 
 ![alt text](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF/blob/main/LTSpice/Photos/Simu_Ampli_1V.png)
 
@@ -55,8 +66,7 @@ Ici, nous avons simulé un courant alternatif grâce auquel il nous sera possibl
 
 
 ## **KiCad**
-Afin de construire un shield PCB qui respecte à la fois les consignes mentionnées dans le document _INSTRUCTIONS for the UF “From the sensor to the test bench” – I4PMH21_ ainsi que les contraintes électroniques, mécaniques et physiques des composants qu'il supportera, il nous a fallu élaborer une maquette virtuelle de ce dernier via le logiciel _KiCad_. Nous avons donc dans un 1<sup>er</sup> temps réalisé une 'schematic' 
-de l'ensemble des composants impliqués :
+Afin de construire un shield PCB qui respecte à la fois les consignes mentionnées dans le document _INSTRUCTIONS for the UF “From the sensor to the test bench” – I4PMH21_ ainsi que les contraintes électroniques, mécaniques et physiques des composants qu'il supportera, il nous a fallu élaborer une maquette virtuelle de ce dernier via le logiciel _KiCad_. Nous avons donc dans un 1<sup>er</sup> temps réalisé une 'schematic' de l'ensemble des composants impliqués :
 
 ![alt text](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF/blob/main/KiCad/Photos/Screen_SCHEMATIC_Projet_Capteur.png)
 
@@ -80,7 +90,8 @@ A la suite de cela, avons pu assembler les composants sur la plaquette. Pour cel
 ![alt text](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF/blob/main/KiCad/Photos/Photo_Shield_Face_Avant.jpg)
 ![alt text](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF/blob/main/KiCad/Photos/Photo_Shield_Face_Arriere.jpg)
 
-_A noter que nous avons finalement décidé de ne pas nous servir de Servomoteur du fait d'un manque de temps._
+> [!NOTE]
+> Nous avons finalement décidé de ne pas nous servir de Servomoteur du fait d'un manque de temps.
 
 
 
@@ -97,17 +108,21 @@ Nous avons réalisé une **[application Android](https://github.com/MOSH-Insa-To
 
 
 ## **Datasheet du capteur graphite**
-La rédaction de la datasheet induit plusieurs tests préalables de nos capteurs. Pour ce faire, nous nous sommes servis d'un banc de test imprimé en 3D, composé de 7 demi-disques allant de 1cm à 5cm de diamètre. Les dirrérents capteurs quant à eux, ont tous les mêmes dimensions, mais sont façonnés avec une variété de crayons à papier, allant du H au B en passant par le F et comprenant nombre de leur dérivées (2H, 4H, 3B et 6B dans notre cas) :
+La rédaction de la datasheet induit plusieurs tests préalables de nos capteurs. Pour ce faire, nous nous sommes servis d'un banc de test imprimé en 3D, composé de 7 demi-disques allant de 1cm à 5cm de diamètre. Les capteurs quant à eux, ont tous les mêmes dimensions, mais sont usinés avec différents type de crayons à papier, allant du H au B en passant par le F et comprenant nombre de leur dérivées (HB, 2H, 4H, 4B et 6B dans notre cas) :
 
-![lat text](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF/blob/main/Datasheet/Variation_durete_crayon.jpg)
+![alt text](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF/blob/main/Datasheet/Variation_durete_crayon.jpg)
 
 ![alt text](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF/blob/main/Datasheet/Photo_Banc_de_test_et_Sensors.jpg)
 
-Nous avons ainsi effectué différentes mesures pour chaque type de crayon, ainsi que pour le flex sensor commercial que l'on pourra donc comparer : 
+Nous avons ainsi effectué plusieurs mesures pour chaque type de crayon, ainsi que pour le flex sensor commercial avec lequel nous comparerons nos résultats : 
 - Mesure de résistance à plat
 - Série de mesure de résistance avec une déformation en **extension** en suivant certains demi-disques sélectionnés.
 - Série de mesure de résistance avec une déformation en **compression** avec les mêmes demi-disques.
 
-_A noter que des valeurs incohérentes ont été observées pour certains capteurs. Nous avons donc décidé de ne pas les retenir dans nos résultats finaux._
+> [!NOTE]
+> Des valeurs incohérentes ont été observées pour certains capteurs. Nous avons donc décidé de ne pas les retenir dans nos résultats finaux.
 
---> Nous avons pu par la suite établir des graphes montrant la variation relative de résistance des différents capteurs en fonction de la déformation subie.
+--> Nous avons pu par la suite établir des graphes montrant la variation relative de résistance des différents capteurs en fonction de la déformation subie (compression ou extension, à divers degré d'intensité) que l'on retrouve dans la **[datasheet](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-DOYHENARD-KEMPF/blob/main/Datasheet/%5BDataheet%5D%20-%20Pencil-Drawn%20Strain%20Gauge.pdf)** de nos capteurs graphite.
+
+> [!WARNING]
+> Les mesures ayant été difficiles, du fait d'une faible reproductibilité induite par des paramètres variants (densité de graphite au cours du temps, faux-contact électrique détecté en fin de prise de mesures), les résultats en valeurs absolues n'ont pas répondu à nos exigeances. Il nous a donc fallu nous appuyer sur l'aide de [collègues INSAïens](https://github.com/MOSH-Insa-Toulouse/2022-2023-Conan-Pistre) de la promo 2024, sans qui les courbes de mesures ne figureraient pas.
